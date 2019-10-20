@@ -9,8 +9,33 @@
 </head>
 <body>
 
-   <h1>motivation</h1>
+    <form action="index.php" method="POST">
+        <label for="language">choose language:</label>
+        <select name="language" id="">
+            <option value="ru"><?= $language['ru'] ?></option>
+            <option value="en"><?= $language['en'] ?></option>
+            <option value="ua"><?= $language['ua'] ?></option>
+        </select>
 
-   <script src="js/main.js"></script>
+        <label for="email">enter email: </label>
+        <input type="email" name="email">
+
+        <label for="phone">enter phone: </label>
+        <input type="phone" name="phone">
+        
+        <label for="password">enter password: </label>
+        <input type="password" name="password">
+
+        
+        <button type="sybmit">klac</button>
+    </form>
+
+    <div>
+        <span>email: <?= $email ?></span> 
+        <span>phone: <?= $phone ?></span>
+        <span>password: <?= $password ?></span>
+    </div>
+
+    <a href="index.php" id='clear'>clear</a>
 </body>
 </html>

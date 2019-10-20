@@ -3,3 +3,45 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    text-align: center;
+}
+
+form {
+    position: relative;
+    left: calc(50% - 150px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    padding: 20px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+}
+
+form input {
+    padding: 5px;
+}
+
+label[for="language"] {
+    margin-bottom: 5px;
+}
+
+select {
+    margin-bottom: 15px;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 5px 60px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
