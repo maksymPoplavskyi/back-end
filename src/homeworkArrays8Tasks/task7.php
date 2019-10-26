@@ -5,7 +5,7 @@
 $arrayLength = rand(10, 100);
 $arr = [];
 for ($i = 0; $i < $arrayLength; $i++) {
-    $arr[] = rand(50, 75);
+  $arr[] = rand(50, 75);
 }
 
 $newArr = [];
@@ -27,9 +27,9 @@ foreach ($newArr as $key => $value) {
 }
 
 foreach ($newArr as $key => $value) {
-    if ($value == $maxValue) {
-        print_r($key);
-    }
+  if ($value == $maxValue) {
+	 print_r($key);
+  }
 }
 
 ?>

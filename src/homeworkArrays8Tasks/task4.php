@@ -7,37 +7,23 @@ for ($i = 0; $i < $arrayLength; $i++) {
   $arr[$i] = random_int(-100, 100);
 }
 
-$firstNegativeValue = null;
-for ($i = 0; $i < $arrayLength; $i++) {
-  if ($arr[$i] < 0) {
-    $firstNegativeValue = $arr[$i];
-    break;
-  }
-}
+print_r($arr);
 
-$newArr = [];
 $sum = 0;
 for ($i = 0; $i < $arrayLength; $i++) {
-  if ($arr[$i] == $firstNegativeValue) {
+  if ($arr[$i] < 0) {
 	 $i++;
 	 for ($n = $i; $n < $arrayLength; $n++) {
-		$newArr[] = $arr[$n];
+		if ($arr[$n] < 0) {
+		  $sum += $arr[$n] * -1;
+		} else {
+		  $sum += $arr[$n];
+		}
 	 }
+	 break;
   }
 }
 
-foreach ($newArr as $key => $value) {
-  if ($value < 0) {
-	 $value = $value * -1;
-	 $sum += $value;
-  } else {
-	 $sum += $value;
-  }
-}
-
-echo '<pre>';
-print_r($newArr);
-echo '<br>';
 print_r($sum);
 
 ?>

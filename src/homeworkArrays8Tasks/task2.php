@@ -13,12 +13,7 @@ for ($i = 0; $i < $arrayLength; $i++) {
     $sumArr += $arr[$i];
 }
 
-$countArr = 0;
-foreach ($arr as $key) {
-    $countArr ++;
-}
-
-$averageArr = $sumArr/$countArr;
+$averageArr = $sumArr/$arrayLength;
 $newArr = [];
 foreach ($arr as $key => $value) {
     if ($value < $averageArr) {
@@ -27,10 +22,6 @@ foreach ($arr as $key => $value) {
 }
 
 print_r($sumArr);
-echo '<br>';
-print_r($arr);
-echo '<br>';
-print_r($countArr);
 echo '<br>';
 print_r($averageArr);
 echo '<br>';
